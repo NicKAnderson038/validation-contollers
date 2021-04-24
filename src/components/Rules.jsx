@@ -5,7 +5,8 @@ const Rules = ({children, rules}) => {
   // Truthy sets off the rules generator
 
   const res = rules.map(r => r()).filter(r => r !== true)
-  console.log(res)
+  const errorLabels = res.map(r => `${children}: ${r}`)
+  console.log(res, errorLabels)
   return (
     <div className={classes.display}>
       {children}

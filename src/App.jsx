@@ -10,7 +10,7 @@ function App() {
     firstComponent: [() => bool || 'Required values'],
     secondComponent: [
       () => bool || 'Required values',
-      () => count > 1 || 'To small',
+      () => count > 0 || 'To small',
       () => count < 10 || 'To Large',
     ],
   }
